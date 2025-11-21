@@ -46,11 +46,12 @@ INSTALLED_APPS = [
     'cloudinary',
     'cloudinary_storage'
 ]
-CORS_ALLOW_ALL_ORIGINS = True
-
 CORS_ALLOWED_ORIGINS = [
+    "*",
     "http://localhost:19006",
     "http://localhost:8081",
+    "exp://192.168.",
+    
 ]
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

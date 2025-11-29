@@ -49,17 +49,11 @@ INSTALLED_APPS = [
 
 
 ]
-
+CORS_ALLOW_ALL_ORIGINS = True
 #Auth user model
 AUTH_USER_MODEL = 'myapp.CustomUser'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:19006",
-    "http://localhost:8081",
-    "http://localhost:8082",
-    # *** Production URL added here ***
-    "https://wbackend-vvb5.onrender.com", 
-]
+CORS_ALLOWED_ORIGINS = ['*']
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
